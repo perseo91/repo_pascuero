@@ -10,7 +10,7 @@ class ArticuloController extends Controller
     //
     public function mostrarCatalogo(){
         $articulos=Articulo::all();
-        return view('articulos.index',['articulos'=>$articulos]);
+        return view('index',['articulos'=>$articulos]);
     }
     public function ingresarArticulo(Request $request){
         $request->validate(['nombre'=>'required|min:3','imagen'=>'required',
